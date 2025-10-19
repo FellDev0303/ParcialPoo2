@@ -10,11 +10,11 @@ package Modelo;
  */
 public class Persona {
 
-    String nombre;
-    int edad;
-    String direccion;
-    String telefono;
-    String nacimiento;
+    protected String nombre;
+    protected int edad;
+    protected String direccion;
+    protected String telefono;
+    protected String nacimiento;
 
     public Persona(String nombre, int edad, String direccion, String telefono, String nacimiento) {
         this.nombre = nombre;
@@ -64,7 +64,7 @@ public class Persona {
         this.nacimiento = nacimiento;
     }
 
-    public String ObtenerDatos() {
+    public String obtenerDatos() {
         return "Nombre: " + nombre 
                 + "\n Dirección: " + direccion 
                 + "\n Telefóno " + telefono
@@ -73,7 +73,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return ObtenerDatos();
+        return obtenerDatos();
     }
 
 }
