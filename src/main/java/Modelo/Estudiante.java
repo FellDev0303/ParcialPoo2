@@ -9,8 +9,8 @@ package Modelo;
  * @author LENOVO
  */
 public class Estudiante extends Persona {
-    int padres;
-    public Estudiante(int padres, int nombre, int edad, int direccion, int telefono, int nacimiento) {
+    String padres;
+    public Estudiante(String padres, int nombre, int edad, int direccion, int telefono, int nacimiento) {
         super(nombre, edad, direccion, telefono, nacimiento);
         this.padres = padres;
     }
