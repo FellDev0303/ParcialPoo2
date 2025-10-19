@@ -22,6 +22,47 @@ public class Persona {
         this.telefono = telefono;
         this.nacimiento = nacimiento;
     }
+
+    public int getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(int nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(int direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public int getNacimiento() {
+        return nacimiento;
+    }
+
+    public void setNacimiento(int nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+    
     
     
     
