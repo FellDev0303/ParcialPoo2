@@ -32,7 +32,7 @@ public class ControladorColegio {
 
         Profesor p = new Profesor(cedula, area, salario, horas, nombre, edad, direccion, telefono, nacimiento);
         profesores.add(p);
-        JOptionPane.showMessageDialog(null,"Profesor Registrado correctamente.");
+        JOptionPane.showMessageDialog(null, "Profesor Registrado correctamente.");
     }
 
     public void registrarEstudiante() {
@@ -42,8 +42,9 @@ public class ControladorColegio {
         String telefono = JOptionPane.showInputDialog("Ingrese el número de telefono de los padres del estudiante: ");
         String nacimiento = JOptionPane.showInputDialog("Ingrese la fecha de nacimiento del estudiante: ");
         String codigo = JOptionPane.showInputDialog("Ingrese el código del estudiante: ");
-        double promedio = Double.parseDouble("Ingrese el promedio del estudiante "
-                + "\ningresar '0' si es un nuevo ciclo escolar");
+        String promedioStr = JOptionPane.showInputDialog(
+                "Ingrese el promedio del estudiante:\n(Ingrese '0' si es un nuevo ciclo escolar)");
+        double promedio = Double.parseDouble(promedioStr);
 
         Estudiante e = new Estudiante(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
         estudiantes.add(e);
@@ -71,21 +72,21 @@ public class ControladorColegio {
                     + "\nPrestaciones (17%): $" + String.format("%.2f", prestaciones)
                     + "\n-----------------\n";
         }
-        
-        datos += "\n TOTAL GENERAL DE PRESTACIONES : $" + String.format("%.2f",totalPrestaciones);
-        
-        JOptionPane.showMessageDialog(null,datos);
+
+        datos += "\n TOTAL GENERAL DE PRESTACIONES : $" + String.format("%.2f", totalPrestaciones);
+
+        JOptionPane.showMessageDialog(null, datos);
     }
-    
-    public void mostrarEstudiantes(){
-    if (estudiantes.isEmpty()){
-    JOptionPane.showMessageDialog(null,"No hay estudiantes registrados.");
-    return;
-    }
-    String datos = "n=== ESTUDIANTES REGISTRADOS ===\n";
-    for (Estudiante e : estudiantes){
-    datos += e.toString() +  "\n-----------------\n";
-    }
-    JOptionPane.showMessageDialog(null, datos);
+
+    public void mostrarEstudiantes() {
+        if (estudiantes.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No hay estudiantes registrados.");
+            return;
+        }
+        String datos = "n=== ESTUDIANTES REGISTRADOS ===\n";
+        for (Estudiante e : estudiantes) {
+            datos += e.toString() + "\n-----------------\n";
+        }
+        JOptionPane.showMessageDialog(null, datos);
     }
 }
