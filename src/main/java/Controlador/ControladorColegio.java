@@ -32,4 +32,18 @@ public class ControladorColegio {
     JOptionPane.showInputDialog("Profesor Registrado correctamente.");
     }
     
+    public void registrarEstudiante(){
+    String nombre =  JOptionPane.showInputDialog("Ingrese el nombre del estudiante: ");
+    int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del estudiante: "));
+    String direccion = JOptionPane.showInputDialog("Ingrese la dirección del estudiante:");
+    String telefono = JOptionPane.showInputDialog("Ingrese el número de telefono de los padres del estudiante: ");
+    String nacimiento = JOptionPane.showInputDialog("Ingrese la fecha de nacimiento del estudiante: ");
+    String codigo = JOptionPane.showInputDialog("Ingrese el código del estudiante: ");
+    double promedio = Double.parseDouble("Ingrese el promedio del estudiante "
+            +"\ningresar '0' si es un nuevo ciclo escolar");
+    
+    Estudiante e = new Estudiante(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
+    estudiantes.add(e);
+    JOptionPane.showMessageDialog(null, "Estudiante Registrado correctamente.");
+    } 
 }
