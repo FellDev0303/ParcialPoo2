@@ -32,7 +32,7 @@ public class ControladorColegio {
 
         Profesor p = new Profesor(cedula, area, salario, horas, nombre, edad, direccion, telefono, nacimiento);
         profesores.add(p);
-        JOptionPane.showInputDialog("Profesor Registrado correctamente.");
+        JOptionPane.showMessageDialog(null,"Profesor Registrado correctamente.");
     }
 
     public void registrarEstudiante() {
