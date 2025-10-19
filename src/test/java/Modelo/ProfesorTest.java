@@ -16,23 +16,22 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author LENOVO
  */
 public class ProfesorTest {
-        public static void main(String[] args) {
-        Profesor profe = new Profesor(12345, "Matemáticas", 50000, 40, "Verónica", 35, "Calle 10 #23-45", "3201234567", "15/03/1989");
 
-        double salarioEsperado = 50000 * 40;
-        double salarioCalculado = profe.calcularSalario();
-        double prestacionesEsperadas = salarioEsperado * 0.17;
+    @Test
+    public void testCalcularSalario() {
+        Profesor profesor = new Profesor(12345, "Matemáticas", 50000, 40, 
+                "Carlos Pérez", 45, "Calle 10 #23", "321654987", "1979-02-15");
 
-        System.out.println("==== TEST PROFESOR ====");
-        System.out.println("Salario esperado: " + salarioEsperado + " | Calculado: " + salarioCalculado);
-        System.out.println("Prestaciones esperadas: " + prestacionesEsperadas + " | Calculadas: " + profe.calcularPrestaciones());
-
-        if (salarioEsperado == salarioCalculado && prestacionesEsperadas == profe.calcularPrestaciones()) {
-            System.out.println(" Test Profesor PASADO");
-        } else {
-            System.out.println(" Test Profesor FALLÓ");
-        }
+        double esperado = 50000 * 40;
+        assertEquals(esperado, profesor.calcularSalario(), "El salario calculado no es correcto");
     }
 
-    
-}
+    @Test
+    public void testCalcularPrestaciones() {
+        Profesor profesor = new Profesor(12345, "Matemáticas", 50000, 40, 
+                "Carlos Pérez", 45, "Calle 10 #23", "321654987", "1979-02-15");
+
+        double esperado = profesor.calcularSalario() * 0.17;
+        assertEquals(esperado, profesor.calcularPrestaciones(), "Las prestaciones no se calculan correctamente");
+    }
+    }
