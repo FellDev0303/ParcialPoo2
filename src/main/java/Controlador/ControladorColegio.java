@@ -45,10 +45,11 @@ public class ControladorColegio {
         String promedioStr = JOptionPane.showInputDialog(
                 "Ingrese el promedio del estudiante:\n(Ingrese '0' si es un nuevo ciclo escolar)");
         double promedio = Double.parseDouble(promedioStr);
-
-        int tipo = Integer.parseInt("Seleccione el tipo de estudiante: \n"
+        
+        String tipoStr = JOptionPane.showInputDialog("Seleccione el tipo de estudiante: \n"
                 + "1. Presencial. \n"
                 + "2. Virtual.");
+        int tipo = Integer.parseInt(tipoStr);
 
         Estudiante e;
         if (tipo == 1) {
@@ -58,7 +59,7 @@ public class ControladorColegio {
         }
         estudiantes.add(e);
         JOptionPane.showMessageDialog(null, "Estudiante Registrado correctamente cómo : "
-                + e.obtenerModalidad()+ ".");
+                + e.obtenerModalidad() + ".");
     }
 
     public void mostrarProfesores() {
