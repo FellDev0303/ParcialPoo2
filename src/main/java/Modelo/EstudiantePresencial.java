@@ -13,5 +13,10 @@ public class EstudiantePresencial extends Estudiante {
     public EstudiantePresencial(String codigo, double promedio, String nombre, int edad, String direccion, String telefono, String nacimiento) {
         super(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
     }
-    
+
+    @Override
+    public String obtenerModalidad() {
+        return "Modalidad: Presencial";
+    }
+
 }
