@@ -26,8 +26,11 @@ public class Profesor extends Persona{
      return salarioHora * horasDictadas ;
     }
     
-    
-    
-    
-    
+    @Override 
+    public String toString(){
+    return super.toString()
+            + "\n Cédula: " + cedula
+            + "\n Área de trabajo :" + areaTrabajo
+            + "\n Salario base: $" + calcularSalario();
+    }
 }
