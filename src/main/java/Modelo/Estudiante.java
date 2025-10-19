@@ -27,6 +27,7 @@ public class Estudiante extends Persona {
     public String toString() {
         return super.toString()
                 + "\nCódigo: " + codigo
-                + "\nPromedio: " + promedio;
+                + "\nPromedio: " + promedio
+                + "\nTipo: "+ obtenerModalidad();
     }
 }
