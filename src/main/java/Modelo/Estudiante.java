@@ -9,6 +9,7 @@ package Modelo;
  * @author LENOVO
  */
 public class Estudiante extends Persona {
+
     private String codigo;
     private double promedio;
 
@@ -17,10 +18,14 @@ public class Estudiante extends Persona {
         this.codigo = codigo;
         this.promedio = promedio;
     }
-    
+
+    public String obtenerModalidad() {
+        return "Modalidad: No especificada";
+    }
+
     @Override
-    public String toString (){
-            return super.toString()
+    public String toString() {
+        return super.toString()
                 + "\nCódigo: " + codigo
                 + "\nPromedio: " + promedio;
     }
