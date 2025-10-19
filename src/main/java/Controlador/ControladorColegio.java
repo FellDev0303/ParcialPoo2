@@ -76,4 +76,16 @@ public class ControladorColegio {
         
         JOptionPane.showMessageDialog(null,datos);
     }
+    
+    public void mostrarEstudiantes(){
+    if (estudiantes.isEmpty()){
+    JOptionPane.showMessageDialog(null,"No hay estudiantes registrados.");
+    return;
+    }
+    String datos = "n=== ESTUDIANTES REGISTRADOS ===\n";
+    for (Estudiante e : estudiantes){
+    datos += e.toString() +  "\n-----------------\n";
+    }
+    JOptionPane.showMessageDialog(null, datos);
+    }
 }
