@@ -10,13 +10,13 @@ package Modelo;
  */
 public class Persona {
 
-    int nombre;
+    String nombre;
     int edad;
-    int direccion;
-    int telefono;
-    int nacimiento;
+    String direccion;
+    String telefono;
+    String nacimiento;
 
-    public Persona(int nombre, int edad, int direccion, int telefono, int nacimiento) {
+    public Persona(String nombre, int edad, String direccion, String telefono, String nacimiento) {
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
@@ -24,11 +24,11 @@ public class Persona {
         this.nacimiento = nacimiento;
     }
 
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -40,27 +40,27 @@ public class Persona {
         this.edad = edad;
     }
 
-    public int getDireccion() {
+    public String getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(int direccion) {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public int getNacimiento() {
+    public String getNacimiento() {
         return nacimiento;
     }
 
-    public void setNacimiento(int nacimiento) {
+    public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
 
