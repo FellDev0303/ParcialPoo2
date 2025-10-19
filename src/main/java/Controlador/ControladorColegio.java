@@ -46,9 +46,19 @@ public class ControladorColegio {
                 "Ingrese el promedio del estudiante:\n(Ingrese '0' si es un nuevo ciclo escolar)");
         double promedio = Double.parseDouble(promedioStr);
 
-        Estudiante e = new Estudiante(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
+        int tipo = Integer.parseInt("Seleccione el tipo de estudiante: \n"
+                + "1. Presencial. \n"
+                + "2. Virtual.");
+
+        Estudiante e;
+        if (tipo == 1) {
+            e = new EstudiantePresencial(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
+        } else {
+            e = new EstudianteVirtual(codigo, promedio, nombre, edad, direccion, telefono, nacimiento);
+        }
         estudiantes.add(e);
-        JOptionPane.showMessageDialog(null, "Estudiante Registrado correctamente.");
+        JOptionPane.showMessageDialog(null, "Estudiante Registrado correctamente cómo : "
+                + e.obtenerModalidad()+ ".");
     }
 
     public void mostrarProfesores() {
