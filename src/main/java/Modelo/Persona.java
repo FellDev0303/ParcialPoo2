@@ -9,6 +9,7 @@ package Modelo;
  * @author LENOVO
  */
 public class Persona {
+
     int nombre;
     int edad;
     int direccion;
@@ -62,9 +63,17 @@ public class Persona {
     public void setNacimiento(int nacimiento) {
         this.nacimiento = nacimiento;
     }
-    
-    
-    
-    
-    
+
+    public String ObtenerDatos() {
+        return "Nombre: " + nombre 
+                + "\n Dirección: " + direccion 
+                + "\n Telefóno " + telefono
+                + "\n Fecha de nacimiento: " + nacimiento;
+    }
+
+    @Override
+    public String toString() {
+        return ObtenerDatos();
+    }
+
 }
