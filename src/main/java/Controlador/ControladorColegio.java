@@ -100,4 +100,22 @@ public class ControladorColegio {
         }
         JOptionPane.showMessageDialog(null, datos);
     }
+    
+
+    // Métodos auxiliares solo para pruebas
+    public void agregarProfesorPrueba(Profesor p) {
+        profesores.add(p);
+    }
+
+    public void agregarEstudiantePrueba(Estudiante e) {
+        estudiantes.add(e);
+    }
+
+    public int contarProfesores() {
+        return profesores.size();
+    }
+
+    public int contarEstudiantes() {
+        return estudiantes.size();
+    }
 }
