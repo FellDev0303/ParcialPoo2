@@ -9,10 +9,19 @@ package Modelo;
  * @author LENOVO
  */
 public class Estudiante extends Persona {
-    String padres;
-    public Estudiante(String padres, int nombre, int edad, int direccion, int telefono, int nacimiento) {
+    private String codigo;
+    private double promedio;
+
+    public Estudiante(String codigo, double promedio, String nombre, int edad, String direccion, String telefono, String nacimiento) {
         super(nombre, edad, direccion, telefono, nacimiento);
-        this.padres = padres;
+        this.codigo = codigo;
+        this.promedio = promedio;
     }
     
+    @Override
+    public String toString (){
+            return super.toString()
+                + "\nCódigo: " + codigo
+                + "\nPromedio: " + promedio;
+    }
 }
